@@ -30,7 +30,6 @@ $( document ).on('turbolinks:load', function() {
         }).done(function(data){
           // when the request comes back it remove hidden class from form fields
           revealFields();
-          console.log(data);
           // fill the fields with the data that comes back, UsersController
           // already protects against nothing for the corressponding key and nilClass
           $('#fullName').val(data.person.fullName);
