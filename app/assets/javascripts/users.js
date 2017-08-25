@@ -28,6 +28,7 @@ $( document ).on('turbolinks:load', function() {
           data: {"q": $('#email').val()},
           dataType: 'json'
         }).done(function(data){
+          $('#valid').html('')
           // when the request comes back it remove hidden class from form fields
           revealFields();
           // fill the fields with the data that comes back, UsersController
@@ -43,7 +44,7 @@ $( document ).on('turbolinks:load', function() {
           revealFields();
         });
       } else {
-        console.log('nope not valid')
+        $('#valid').html('*Invalid*')
       }
 
     }, 750);
