@@ -1,12 +1,12 @@
 $( document ).on('turbolinks:load', function() {
   function validateEmail (email) {
-    let valid = false
-    let re = new RegExp('[^@]+@[^@]+\\.[^@]+')
+    var isValid = false
+    var re = new RegExp('[^@]+@[^@]+\\.[^@]+')
     if (re.test(email)) {
-      valid = true
+      isValid = true
     }
 
-    return (valid)
+    return (isValid)
   }
 
   function revealFields(){
