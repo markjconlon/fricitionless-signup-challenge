@@ -5,20 +5,10 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version built with ruby 2.4.0
 
-* System dependencies
+* Rails Version 5.0.2
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Simple model-less application that detects user's inputted e-mail and auto-fills their known information from clearbit.com
 
 * ...
