@@ -1,13 +1,4 @@
 $( document ).on('turbolinks:load', function() {
-  function validateEmail (email) {
-    let errors = {}
-    let re = new RegExp('[^@]+@[^@]+\\.[^@]+')
-    if (!re.test(email)) {
-      errors['nope'] = 'Email is incorrectly formatted'
-    }
-
-    return Object.keys(errors).length === 0
-  }
 
   function revealFields(){
     $('#fullNameDiv').removeClass("hidden")
