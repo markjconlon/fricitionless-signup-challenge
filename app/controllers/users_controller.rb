@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   end
 
   def check_email
-    @result = Clearbit::Enrichment.find(email: 'markjconlon@gmail.com', stream: true)
+    enterred_email = (params[:q])
+    @result = Clearbit::Enrichment.find(email: enterred_email, stream: true)
     if request.xhr?
       render :json =>
       {person: {fullName: "#{@result.person.name.fullName}",

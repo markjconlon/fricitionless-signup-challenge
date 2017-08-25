@@ -25,6 +25,7 @@ $( document ).on('turbolinks:load', function() {
         $.ajax({
           url: '/users/check_email',
           method: 'GET',
+          data: {"q": $('#email').val()},
           dataType: 'json'
         }).done(function(data){
           // when the request comes back it remove hidden class from form fields
@@ -33,7 +34,7 @@ $( document ).on('turbolinks:load', function() {
           // fill the fields with the data that comes back, UsersController
           // already protects against nothing for the corressponding key and nilClass
           $('#fullName').val(data.person.fullName);
-          $('companyName').val(data.person.companyName);
+          $('#companyName').val(data.person.companyName);
           $('#employees').val(data.person.employees);
           $('#phone').val(data.person.phone);
         }).fail(function(){
